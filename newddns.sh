@@ -22,5 +22,5 @@ sed -i -e "s/CFRECORD_NAME=/CFRECORD_NAME=$record/g" cfddns.sh
 echo 'ddns配置完成'
 chmod +x cfddns.sh && ./cfddns.sh
 echo '设置定时任务'
-echo "*/2 * * * * /root/cfddns.sh >> /var/log/cfddns.log 2>&1" >> /etc/crontab
-echo 配置完成
+echo -e "*/2 * * * * /root/cfddns.sh >> /var/log/cfddns.log 2>&1" >> /var/spool/cron/root
+echo '配置完成'
